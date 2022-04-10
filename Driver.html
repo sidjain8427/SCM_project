@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply For Driver</title>
+    <link rel="stylesheet" href="driver.css">
+</head>
+<body>
+  <script>
+
+      function numberOnly(id) {
+    // Get element by id which passed as parameter within HTML element event
+    var element = document.getElementById(id);
+    // This removes any other character but numbers as entered by user
+    element.value = element.value.replace(/[^0-9]/gi, "");
+}
+    </script>
+    <div class="hero">
+
+        <nav>
+        <img src="LOGO.png" class="logo">
+        <ul>
+        <li><a href="Chitkara.html">HOME</a></li>
+        <li><a href="AboutUs.Html">ABOUT US</a></li>
+        <li><a href="booking.html">BOOK NOW</a></li>
+        <li><a href="ContactUs.Html">CONTACT US</a></li>
+        </ul>
+        <a href="chitkara.html" class="btn">BECOME A PASSENGER</a>
+        </nav>
+
+
+        <div class="wrapper">
+            <div class="title">
+              Fill out the form to start earning with us
+            </div>
+            <div class="form">
+               <div class="inputfield">
+                  <label> Name</label>
+                  <input type="text" class="input">
+               </div>  
+               <div class="inputfield">
+                  <label>Password</label>
+                  <input type="password" class="input">
+               </div>  
+              <div class="inputfield">
+                  <label>Confirm Password</label>
+                  <input type="password" class="input">
+               </div> 
+                <div class="inputfield">
+                  <label>Gender</label>
+                  <div class="custom_select">
+                    <select>
+                      <option value="">Select</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                    </select>
+                  </div>
+               </div> 
+                <div class="inputfield">
+                  <label>Email Address</label>
+                  <input type="email" class="input">
+               </div> 
+              <div class="inputfield">
+                  <label>Phone Number</label>
+                  <input type="number" class="input" >
+               </div> 
+              <div class="inputfield">
+                  <label>Address</label>
+                  <textarea class="textarea"></textarea>
+               </div>
+               <div class="inputfield">
+                <label>City</label>
+                <input type="text" class="input">
+                 
+               </div> 
+              <div class="inputfield">
+                  <label>Pincode</label>
+                  <input type="text" oninput="numberOnly(this.id);" maxlength="6" id="Pincode" class="input" name="number">
+               </div> 
+               <div class="inputfield">
+                <label>State</label>
+               <div class="custom_select">
+                <select>
+                      <option>Select</option>
+                      <option value="AP">Andhra Pradesh</option>
+                      <option value="AR">Arunachal Pradesh</option>
+                      <option value="AS">Assam</option>
+                      <option value="BR">Bihar</option>
+                      <option value="CT">Chhattisgarh</option>
+                      <option value="GA">Goa</option>
+                      <option value="GJ">Gujarat</option>
+                      <option value="HR">Haryana</option>
+                      <option value="HP">Himachal Pradesh</option>
+                      <option value="JK">Jammu and Kashmir</option>
+                      <option value="JH">Jharkhand</option>
+                      <option value="KA">Karnataka</option>
+                      <option value="KL">Kerala</option>
+                      <option value="MP">Madhya Pradesh</option>
+                      <option value="MH">Maharashtra</option>
+                      <option value="MN">Manipur</option>
+                      <option value="ML">Meghalaya</option>
+                      <option value="MZ">Mizoram</option>
+                      <option value="NL">Nagaland</option>
+                      <option value="OL">Odisha</option>
+                      <option value="PB">Punjab</option>
+                      <option value="RJ">Rajasthan</option>
+                      <option value="SK">Sikkim</option>
+                      <option value="TN">Tamil Nadu</option>
+                      <option value="TG">Telangana</option>
+                      <option value="TR">Tripura</option>
+                      <option value="UT">Uttarakhand</option>
+                      <option value="UP">Uttar Pradesh</option>
+                      <option value="WB">West Bengal</option>
+                      <option value="AN">Andaman and Nicobar Islands</option>
+                      <option value="CH">Chandigarh</option>
+                      <option value="DN">Dadra and Nagar Haveli</option>
+                      <option value="DD">Daman and Diu</option>
+                      <option value="DL">Delhi</option>
+                      <option value="LD">Lakshadweep</option>
+                      <option value="PY">Puducherry</option>
+                    </select>
+
+               </div>
+             </div>
+              <div class="inputfield">
+                <label>Bike Model</label>
+               <div class="custom_select">
+                <select>
+                  <option>Select</option>
+                  <option>Aprilia </option>
+                  <option>Hero</option>
+                  <option>Honda</option>
+                  <option>Hero Electric</option>
+                  <option>Bajaj</option>
+                  <option>TVS</option>
+                  <option>Harley-Davidson</option>
+                  <option>Vespa</option>
+                  <option>Mahindra</option>
+                  <option>KTM</option>
+                  <option>Jawa</option>
+                  <option>Kawasaki</option>
+                  <option>Ducati</option>
+                  <option>BMW</option>
+                  <option>Suzuki</option>
+                  <option>Royal Enfield</option>
+                  <option>Yamaha</option>
+                </select>
+              </div>
+            </div>
+            <div class="content"> 
+<input id="default-btn" type="file" hidden >
+              <div class="btn1">
+              <button  onclick="active()"id="custom-btn">Uplaod RC </button> 
+          </div>
+              <div class="file-name">
+                No file Chosen
+              </div>
+       </div>
+        <script >
+          const defaultBtn =document.querySelector("#default-btn");
+          const customBtn =document.querySelector("#custom-btn");
+          const fileName =document.querySelector(".file-name");
+          let regExp=/[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_]+$/;
+          function active()
+          {
+            defaultBtn.click();      
+          }
+          defaultBtn.addEventListener("change",function(){
+            if (this.value) {
+              let nameValue=this.value.match(regExp);
+              fileName.style.display="block";
+              fileName.textContent=nameValue;
+            }
+          });
+         </script> 
+       <br>
+       <div class="content"> 
+<input id="default-bt" type="file" hidden >
+              <div class="btn1">
+              <button  onclick="activ()"id="custom-bt">Upload Aadhar Code </button> 
+          </div>
+              <div class="filename">
+                No file Chosen
+              </div>
+       </div>
+       <script >
+          const defaultBt =document.querySelector("#default-bt");
+          const customBt =document.querySelector("#custom-bt");
+          const fileNam =document.querySelector(".filename");
+          // let regExp=/[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_]+$/;
+          function activ()
+          {
+            defaultBt.click();      
+          }
+          defaultBt.addEventListener("change",function(){
+            if (this.value) {
+              let nameValue=this.value.match(regExp);
+              fileNam.style.display="block";
+              fileNam.textContent=nameValue;
+            }
+          });
+         </script>
+         <br> 
+         <div class="content"> 
+<input id="default-btun" type="file" hidden >
+              <div class="btn1">
+              <button  onclick="activee()"id="custom-btun">Upload Pan card</button> 
+          </div>
+              <div class="filenamee">
+                No file Chosen
+              </div>
+            </div>
+            <script >
+          const defaultBtun =document.querySelector("#default-btun");
+          const customBtun =document.querySelector("#custom-btun");
+          const fileNamee =document.querySelector(".filenamee");
+          // let regExp=/[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_]+$/;
+          function activee()
+          {
+            defaultBtun.click();      
+          }
+          defaultBtun.addEventListener("change",function(){
+            if (this.value) {
+              let nameValue=this.value.match(regExp);
+              fileNamee.style.display="block";
+              fileNamee.textContent=nameValue;
+            }
+          });
+        </script>
+
+              <div class="inputfield terms">
+                  <label class="check">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <p id="p3">I Agreed to terms and conditions</p>
+               </div> 
+              <div class="inputfield">
+                <input type="submit" value="Register" class="btn">
+              </div>
+            </div>
+        </div>	
+    </div>
+       
+</body>
+</html>
